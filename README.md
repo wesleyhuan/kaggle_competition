@@ -17,6 +17,30 @@
   - 基於EDA結果進行資料預處理和特徵工程
   - 包含資料載入、預處理、模型訓練和提交步驟
 
+- **[basic-eda-season-6-episode-2.ipynb](basic-eda-season-6-episode-2.ipynb)**
+  - 基礎EDA分析 (Episode 2)
+  - 探索資料特徵和分佈
+  - 包含資料視覺化和相關性分析
+  - 為後續的資料預處理和特徵工程提供決策依據
+
+- **[baseline-xgb-season-6-episode-2.ipynb](baseline-xgb-season-6-episode-2.ipynb)**
+  - XGBoost模型訓練與優化 (Episode 2)
+  - 使用OPTUNA進行超參數搜尋
+  - 基於EDA結果進行資料預處理和特徵工程
+  - 包含資料載入、預處理、模型訓練和提交步驟
+
+- **[basic-eda-season-6-episode-3.ipynb](basic-eda-season-6-episode-3.ipynb)**
+  - 基礎EDA分析 (Episode 3)
+  - 探索資料特徵和分佈
+  - 包含資料視覺化和相關性分析
+  - 為後續的資料預處理和特徵工程提供決策依據
+
+- **[baseline-xgb-season-6-episode-3.ipynb](baseline-xgb-season-6-episode-3.ipynb)**
+  - XGBoost模型訓練與優化 (Episode 3)
+  - 使用OPTUNA進行超參數搜尋
+  - 基於EDA結果進行資料預處理和特徵工程
+  - 包含資料載入、預處理、模型訓練和提交步驟
+
 ### Season 5
 - **[beginer-friendly-solution-season-5-episode-10.ipynb](beginer-friendly-solution-season-5-episode-10.ipynb)**
   - 初學者友善的完整解決方案
