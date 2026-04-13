@@ -6,66 +6,79 @@
 
 ### Season 6
 - **[beginer-level-eda-season-6-episode-1.ipynb](beginer-level-eda-season-6-episode-1.ipynb)**
-  - 基礎EDA (Exploratory Data Analysis) 分析
-  - 探索資料特徵和分佈
-  - 包含資料視覺化和相關性分析
-  - 為後續的資料預處理和特徵工程提供決策依據
+  - 學生考試成績資料集的基礎EDA分析
+  - 探索學習時數、睡眠品質和出勤率等特徵分佈
+  - 建議序數編碼和三個交互特徵：sleep_hours_quality、facility_rating_attendance、study_method_hours
+  - 包含可重用的Preprocessor類別
 
 - **[baseline-xgb-of-season-6-episode-1.ipynb](baseline-xgb-of-season-6-episode-1.ipynb)**
-  - XGBoost模型訓練與優化
-  - 使用OPTUNA進行超參數搜尋
-  - 基於EDA結果進行資料預處理和特徵工程
-  - 包含資料載入、預處理、模型訓練和提交步驟
+  - 學生考試成績預測的XGBoost迴歸模型
+  - 使用OPTUNA進行超參數搜尋（30次試驗），最佳RMSE: 8.75
+  - 創建三個交互特徵：sleep_hours_quality、facility_rating_attendance、study_method_hours
+  - 包含中位數填補和序數編碼前處理
 
 - **[basic-eda-season-6-episode-2.ipynb](basic-eda-season-6-episode-2.ipynb)**
-  - 基礎EDA分析 (Episode 2)
-  - 探索資料特徵和分佈
-  - 包含資料視覺化和相關性分析
-  - 為後續的資料預處理和特徵工程提供決策依據
+  - 心臟病資料集的基礎EDA分析 (Episode 2)
+  - 分析年齡、血壓、膽固醇、最大心率等特徵的相關性
+  - 識別BP_Age_Product為重要交互特徵
+  - 建議對分類特徵使用One-Hot編碼，對數值特徵使用標準化
 
 - **[baseline-xgb-season-6-episode-2.ipynb](baseline-xgb-season-6-episode-2.ipynb)**
-  - XGBoost模型訓練與優化 (Episode 2)
-  - 使用OPTUNA進行超參數搜尋
-  - 基於EDA結果進行資料預處理和特徵工程
-  - 包含資料載入、預處理、模型訓練和提交步驟
+  - 心臟病預測的XGBoost迴歸模型 (Episode 2)
+  - 使用OPTUNA進行超參數搜尋，輸出概率預測
+  - 創建BP_Age_Product交互特徵
+  - One-Hot編碼分類特徵，StandardScaler標準化數值特徵
 
 - **[basic-eda-season-6-episode-3.ipynb](basic-eda-season-6-episode-3.ipynb)**
-  - 基礎EDA分析 (Episode 3)
-  - 探索資料特徵和分佈
-  - 包含資料視覺化和相關性分析
-  - 為後續的資料預處理和特徵工程提供決策依據
+  - 客戶流失資料集的基礎EDA分析 (Episode 3)
+  - 大型資料集（594K筆訓練樣本）的特徵分佈和相關性分析
+  - 識別重要交互特徵 Monthly_Fee_Ratio
+  - 包含可重用的Preprocessor類別
 
 - **[baseline-xgb-season-6-episode-3.ipynb](baseline-xgb-season-6-episode-3.ipynb)**
-  - XGBoost模型訓練與優化 (Episode 3)
-  - 使用OPTUNA進行超參數搜尋
-  - 基於EDA結果進行資料預處理和特徵工程
-  - 包含資料載入、預處理、模型訓練和提交步驟
+  - 客戶流失預測的XGBoost迴歸模型 (Episode 3)
+  - 使用OPTUNA進行超參數搜尋，最佳RMSE: 0.3082
+  - 包含二元編碼、分類替換和One-Hot編碼前處理
+  - 創建Monthly_Fee_Ratio交互特徵
+
+- **[baseline-xgb-classification-season-6-episode-3.ipynb](baseline-xgb-classification-season-6-episode-3.ipynb)**
+  - 客戶流失預測的XGBoost分類模型 (Episode 3)
+  - 使用XGBClassifier搭配StratifiedKFold處理不平衡類別（1:4流失比例）
+  - 使用OPTUNA進行超參數搜尋，最佳AUC: 0.9164
+  - 輸出概率預測值（0.0-1.0）
+
+- **[basic-eda-season-6-episode-4.ipynb](basic-eda-season-6-episode-4.ipynb)**
+  - 農業灌溉資料集的基礎EDA分析 (Episode 4)
+  - 21個特徵的分佈分析，包含土壤屬性、作物類型和灌溉資料
+  - 建議對排序特徵使用序數映射（如Crop_Growth_Stage），對名義特徵使用One-Hot編碼
+  - 提供溫度×日照時數等交互特徵建議
 
 ### Season 5
 - **[beginer-friendly-solution-season-5-episode-10.ipynb](beginer-friendly-solution-season-5-episode-10.ipynb)**
-  - 初學者友善的完整解決方案
-  - 詳細的步驟說明和思路
-  - 涵蓋資料探索、視覺化、預處理、特徵工程
-  - 包含模型選擇、調優和提交
+  - 道路事故風險預測的初學者友善完整解決方案（517K筆訓練樣本）
+  - 包含多項式特徵工程（車道數和曲率交互）
+  - 分析不同n_estimators值（10-290）找出最佳設定，MAE: 0.0436
+  - 涵蓋資料探索、視覺化、預處理、特徵工程到提交的完整流程
 
 - **[easy-and-simple-solution-season-5-episode-11.ipynb](easy-and-simple-solution-season-5-episode-11.ipynb)**
-  - 簡潔易讀的解決方案
-  - 重點關注程式碼可讀性
-  - 標準的機器學習工作流程
-  - 適合學習和參考
+  - 貸款違約預測的簡潔XGBoost分類解決方案
+  - 創建衍生特徵：income_loan_ratio、total_debt、available_income
+  - 使用OPTUNA（50次試驗）以AUC為指標進行超參數調優
+  - 函數式前處理（非類別式），程式碼風格簡潔易讀
 
 - **[easy-and-simple-solution-season-5-episode-12.ipynb](easy-and-simple-solution-season-5-episode-12.ipynb)**
-  - 易懂的第12集解決方案
-  - 逐步展示完整的分析過程
-  - 包含模型對比和優化策略
+  - 糖尿病預測的XGBoost分類解決方案
+  - 創建6個醫學相關交互特徵：pulse_pressure、cholesterol_ratio、ldl_hdl_ratio等
+  - 使用OPTUNA（50次試驗）和StratifiedKFold進行超參數調優
+  - 輸出概率預測值
 
 - **[improve-solution-season-5-episode-12.ipynb](improve-solution-season-5-episode-12.ipynb)**
-  - 第12集的改進版本
+  - 糖尿病預測的改進版本，OOF AUC: 0.7259
   - 跳過EDA部分（參考原始筆記本）
   - 引入進階技巧：
-    - 從相關性矩陣增加特徵
-    - Out-of-Fold (OOF) 預測集成
-  - 專注於性能提升
+    - 基於醫學領域知識的強化特徵工程
+    - Out-of-Fold (OOF) 預測集成提升泛化能力
+  - 使用tree_method='hist'加速訓練，含早停機制
 
 ## 🛠 工作流程
 
@@ -125,7 +138,8 @@
 
 ### 高級
 5. 研究 `baseline-xgb-of-season-6-episode-1.ipynb` 中的XGBoost優化
-6. 學習 `improve-solution-season-5-episode-12.ipynb` 中的進階技巧
+6. 比較 `baseline-xgb-season-6-episode-3.ipynb`（迴歸）和 `baseline-xgb-classification-season-6-episode-3.ipynb`（分類）的差異
+7. 學習 `improve-solution-season-5-episode-12.ipynb` 中的進階技巧
 
 ## 💡 關鍵技巧
 
