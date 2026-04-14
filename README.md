@@ -82,6 +82,8 @@
 
 ## 🛠 工作流程
 
+![Kaggle ML Pipeline Workflow](workflow.png)
+
 每個notebook通常遵循以下步驟：
 
 1. **資料載入和探索**
