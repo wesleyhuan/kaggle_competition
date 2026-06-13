@@ -53,6 +53,27 @@
   - 建議對排序特徵使用序數映射（如Crop_Growth_Stage），對名義特徵使用One-Hot編碼
   - 提供溫度×日照時數等交互特徵建議
 
+- **[basic-eda-s6e5-with-claude.ipynb](basic-eda-s6e5-with-claude.ipynb)**
+  - F1 賽車進站預測的基礎 EDA 分析 (Episode 5)
+  - 使用 Claude Code 輔助進行資料分析並生成報告
+  - 識別關鍵特徵：TyreLife、LapNumber、Stint 和 RaceProgress 與目標變數呈正相關
+  - 分析發現不同輪胎成分（HARD, MEDIUM, WET）的進站率差異極大
+  - 包含異常值處理（安全車時期的極端 LapTime）與初步預處理函數
+
+- **[lightgbm-s6e5-with-claude.ipynb](lightgbm-s6e5-with-claude.ipynb)**
+  - F1 賽車進站預測的 LightGBM 分類模型 (Episode 5)
+  - 整合 Claude Code 建議的 12 項預處理技術，包含：
+    - 高基數類別特徵（Driver, Race）的平滑目標編碼 (Target Encoding)
+    - 領域知識驅動的輪胎壽命比率與最大任期分析
+    - 時間序列特徵（滯後值 Lag 與滾動統計 Rolling statistics）
+  - 使用 OPTUNA 進行超參數搜尋（50 次試驗），最佳平均 AUC: 0.9238
+
+- **[basic-eda-s6e6.ipynb](basic-eda-s6e6.ipynb)**
+  - 恆星、星系與類星體分類的基礎 EDA 分析 (Episode 6)
+  - 處理大規模資料集（577K 筆樣本），分析多色測光系統（u, g, r, i, z 濾鏡）
+  - 識別紅移 (Redshift) 為區分各類別的核心關鍵特徵
+  - 分析星系群體（紅序列與藍雲）以及光譜類型與目標類別的強相關性
+
 ### Season 5
 - **[beginer-friendly-solution-season-5-episode-10.ipynb](beginer-friendly-solution-season-5-episode-10.ipynb)**
   - 道路事故風險預測的初學者友善完整解決方案（517K筆訓練樣本）
@@ -123,6 +144,7 @@
 - **NumPy** - 數值計算
 - **Scikit-learn** - 機器學習庫
 - **XGBoost** - 梯度提升模型
+- **LightGBM** - 梯度提升模型
 - **Matplotlib/Seaborn** - 資料視覺化
 - **OPTUNA** - 超參數優化框架
 
@@ -139,7 +161,9 @@
 ### 高級
 5. 研究 `baseline-xgb-of-season-6-episode-1.ipynb` 中的XGBoost優化
 6. 比較 `baseline-xgb-season-6-episode-3.ipynb`（迴歸）和 `baseline-xgb-classification-season-6-episode-3.ipynb`（分類）的差異
-7. 學習 `improve-solution-season-5-episode-12.ipynb` 中的進階技巧
+7. 學習 `lightgbm-s6e5-with-claude.ipynb` 中整合領域知識與時間序列特徵工程的技巧
+8. 參考 `basic-eda-s6e6.ipynb` 處理大規模科學資料集的分析方法
+9. 研究 `improve-solution-season-5-episode-12.ipynb` 中的進階技巧
 
 ## 💡 關鍵技巧
 
